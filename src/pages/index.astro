@@ -1,0 +1,37 @@
+---
+import "./styles.css";
+import {
+  Header,
+  Footer,
+  HeroSection,
+  AboutSection,
+  ContactSection,
+  PricingSection,
+} from "../components";
+import Layout from "../layout/Layout.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro is awesome!</title>
+  </head>
+  <body>
+    <Layout>
+      <div data-testid="hero-section"><HeroSection /></div>
+      <div data-testid="about-section"><AboutSection /></div>
+      <div data-testid="pricing-section"><PricingSection /></div>
+      <div data-testid="contact-section"><ContactSection /></div>
+    </Layout>
+  </body>
+</html>
+
+<!-- <Header client:load />
+<HeroSection />
+<AboutSection />
+<PricingSection />
+<ContactSection />
+<Footer /> -->
